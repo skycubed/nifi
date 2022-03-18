@@ -24,6 +24,7 @@
     <artifactId>nifi-web-api</artifactId>
     <packaging>war</packaging>
     <properties>
+        <swagger.source.dir>${project.basedir}/src/main/resources/swagger</swagger.source.dir>
         <maven.javadoc.skip>true</maven.javadoc.skip>
         <source.skip>true</source.skip>
     </properties>
@@ -100,9 +101,7 @@
                                     <swaggerDirectory>${project.build.directory}/swagger-ui</swaggerDirectory>
                                     <securityDefinitions>
                                         <securityDefinition>
-                                            <name>Bearer</name>
-                                            <type>apiKey</type>
-                                            <in>header</in>
+                                            <jsonPath>${swagger.source.dir}/security-definitions.json</jsonPath>
                                         </securityDefinition>
                                     </securityDefinitions>
                                 </apiSource>

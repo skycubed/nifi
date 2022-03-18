@@ -171,6 +171,7 @@ public class ParameterContextResource extends ApplicationResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @ApiOperation(
+        code = 201,
         value = "Create a Parameter Context",
         response = ParameterContextEntity.class,
         authorizations = {
@@ -178,7 +179,6 @@ public class ParameterContextResource extends ApplicationResource {
             @Authorization(value = "Read - for every inherited parameter context")
         })
     @ApiResponses(value = {
-        @ApiResponse(code = 201, message = "Operation was successful."),
         @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
         @ApiResponse(code = 401, message = "Client could not be authenticated."),
         @ApiResponse(code = 403, message = "Client is not authorized to make this request."),

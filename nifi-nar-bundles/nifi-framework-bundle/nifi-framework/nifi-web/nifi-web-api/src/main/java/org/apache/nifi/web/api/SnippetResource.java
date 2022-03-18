@@ -137,6 +137,7 @@ public class SnippetResource extends ApplicationResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @ApiOperation(
+            code = 201,
             value = "Creates a snippet. The snippet will be automatically discarded if not used in a subsequent request after 1 minute.",
             response = SnippetEntity.class,
             authorizations = {
@@ -145,7 +146,6 @@ public class SnippetResource extends ApplicationResource {
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),

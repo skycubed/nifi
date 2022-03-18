@@ -225,6 +225,7 @@ public class ControllerResource extends ApplicationResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("reporting-tasks")
     @ApiOperation(
+            code = 201,
             value = "Creates a new reporting task",
             response = ReportingTaskEntity.class,
             authorizations = {
@@ -235,7 +236,6 @@ public class ControllerResource extends ApplicationResource {
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -359,6 +359,7 @@ public class ControllerResource extends ApplicationResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("registry-clients")
     @ApiOperation(
+            code = 201,
             value = "Creates a new registry client",
             response = RegistryClientEntity.class,
             authorizations = {
@@ -367,7 +368,6 @@ public class ControllerResource extends ApplicationResource {
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -733,6 +733,7 @@ public class ControllerResource extends ApplicationResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("controller-services")
     @ApiOperation(
+            code = 201,
             value = "Creates a new controller service",
             response = ControllerServiceEntity.class,
             authorizations = {
@@ -743,7 +744,6 @@ public class ControllerResource extends ApplicationResource {
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),

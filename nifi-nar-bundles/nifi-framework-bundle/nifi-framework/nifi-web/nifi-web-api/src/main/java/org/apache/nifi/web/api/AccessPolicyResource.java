@@ -180,6 +180,7 @@ public class AccessPolicyResource extends ApplicationResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @ApiOperation(
+            code = 201,
             value = "Creates an access policy",
             response = AccessPolicyEntity.class,
             authorizations = {
@@ -188,7 +189,7 @@ public class AccessPolicyResource extends ApplicationResource {
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
+                    @ApiResponse(code = 201, message = "Operation was successful.", response = AccessPolicyEntity.class),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),

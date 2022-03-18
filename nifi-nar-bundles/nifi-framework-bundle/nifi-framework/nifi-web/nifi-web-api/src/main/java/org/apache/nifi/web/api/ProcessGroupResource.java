@@ -1926,6 +1926,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/process-groups")
     @ApiOperation(
+            code = 201,
             value = "Creates a process group",
             response = ProcessGroupEntity.class,
             authorizations = {
@@ -1934,7 +1935,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -2163,6 +2163,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/processors")
     @ApiOperation(
+            code = 201,
             value = "Creates a new processor",
             response = ProcessorEntity.class,
             authorizations = {
@@ -2173,7 +2174,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -2354,6 +2354,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/input-ports")
     @ApiOperation(
+            code = 201,
             value = "Creates an input port",
             response = PortEntity.class,
             authorizations = {
@@ -2362,7 +2363,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -2505,6 +2505,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/output-ports")
     @ApiOperation(
+            code = 201,
             value = "Creates an output port",
             response = PortEntity.class,
             authorizations = {
@@ -2513,7 +2514,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -2657,6 +2657,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/funnels")
     @ApiOperation(
+            code = 201,
             value = "Creates a funnel",
             response = FunnelEntity.class,
             authorizations = {
@@ -2665,7 +2666,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -2809,6 +2809,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/labels")
     @ApiOperation(
+            code = 201,
             value = "Creates a label",
             response = LabelEntity.class,
             authorizations = {
@@ -2817,7 +2818,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -2961,6 +2961,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/remote-process-groups")
     @ApiOperation(
+            code = 201,
             value = "Creates a new process group",
             response = RemoteProcessGroupEntity.class,
             authorizations = {
@@ -2969,7 +2970,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -3135,6 +3135,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/connections")
     @ApiOperation(
+            code = 201,
             value = "Creates a connection",
             response = ConnectionEntity.class,
             authorizations = {
@@ -3145,7 +3146,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -3362,6 +3362,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/snippet-instance")
     @ApiOperation(
+            code = 201,
             value = "Copies a snippet and discards it.",
             response = FlowEntity.class,
             authorizations = {
@@ -3372,7 +3373,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -3512,6 +3512,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/template-instance")
     @ApiOperation(
+            code = 201,
             value = "Instantiates a template",
             response = FlowEntity.class,
             authorizations = {
@@ -3522,7 +3523,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -3705,6 +3705,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/templates")
     @ApiOperation(
+            code = 201,
             value = "Creates a template and discards the specified snippet.",
             response = TemplateEntity.class,
             authorizations = {
@@ -3714,7 +3715,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -3901,6 +3901,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_XML)
     @Path("{id}/templates/import")
     @ApiOperation(
+            code = 201,
             value = "Imports a template",
             response = TemplateEntity.class,
             authorizations = {
@@ -3909,7 +3910,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -3986,6 +3986,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/controller-services")
     @ApiOperation(
+            code = 201,
             value = "Creates a new controller service",
             response = ControllerServiceEntity.class,
             authorizations = {
@@ -3996,7 +3997,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -4330,6 +4330,7 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}/process-groups/import")
     @ApiOperation(
+            code = 201,
             value = "Imports a specified process group",
             response = ProcessGroupEntity.class,
             authorizations = {
@@ -4338,7 +4339,6 @@ public class ProcessGroupResource extends FlowUpdateResource<ProcessGroupImportE
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),

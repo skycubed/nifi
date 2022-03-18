@@ -322,6 +322,7 @@ public class ProvenanceEventResource extends ApplicationResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("replays")
     @ApiOperation(
+            code = 201,
             value = "Replays content from a provenance event",
             response = ProvenanceEventEntity.class,
             authorizations = {
@@ -332,7 +333,6 @@ public class ProvenanceEventResource extends ApplicationResource {
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),

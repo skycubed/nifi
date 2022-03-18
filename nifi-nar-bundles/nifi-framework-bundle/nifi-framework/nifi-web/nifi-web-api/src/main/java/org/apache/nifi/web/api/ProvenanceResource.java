@@ -155,6 +155,7 @@ public class ProvenanceResource extends ApplicationResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("") // necessary due to bug in swagger
     @ApiOperation(
+            code = 201,
             value = "Submits a provenance query",
             notes = "Provenance queries may be long running so this endpoint submits a request. The response will include the "
                     + "current state of the query. If the request is not completed the URI in the response can be used at a "
@@ -168,7 +169,6 @@ public class ProvenanceResource extends ApplicationResource {
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
@@ -408,6 +408,7 @@ public class ProvenanceResource extends ApplicationResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("lineage")
     @ApiOperation(
+            code = 201,
             value = "Submits a lineage query",
             notes = "Lineage queries may be long running so this endpoint submits a request. The response will include the "
                     + "current state of the query. If the request is not completed the URI in the response can be used at a "
@@ -421,7 +422,6 @@ public class ProvenanceResource extends ApplicationResource {
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "Client could not be authenticated."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),

@@ -302,6 +302,7 @@ public class AccessResource extends ApplicationResource {
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/kerberos")
     @ApiOperation(
+            code = 201,
             value = "Creates a token for accessing the REST API via Kerberos ticket exchange / SPNEGO negotiation",
             notes = "The token returned is formatted as a JSON Web Token (JWT). The token is base64 encoded and comprised of three parts. The header, " +
                     "the body, and the signature. The expiration of the token is a contained within the body. The token can be used in the Authorization header " +
@@ -310,7 +311,6 @@ public class AccessResource extends ApplicationResource {
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Operation was successful."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 401, message = "NiFi was unable to complete the request because it did not contain a valid Kerberos " +
                             "ticket in the Authorization header. Retry this request after initializing a ticket with kinit and " +
@@ -375,6 +375,7 @@ public class AccessResource extends ApplicationResource {
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/token")
     @ApiOperation(
+            code = 201,
             value = "Creates a token for accessing the REST API via username/password",
             notes = "The token returned is formatted as a JSON Web Token (JWT). The token is base64 encoded and comprised of three parts. The header, " +
                     "the body, and the signature. The expiration of the token is a contained within the body. It is stored in the browser as a cookie, but also returned in" +
@@ -383,7 +384,6 @@ public class AccessResource extends ApplicationResource {
     )
     @ApiResponses(
             value = {
-                    @ApiResponse(code = 201, message = "Access token successfully created."),
                     @ApiResponse(code = 400, message = "NiFi was unable to complete the request because it was invalid. The request should not be retried without modification."),
                     @ApiResponse(code = 403, message = "Client is not authorized to make this request."),
                     @ApiResponse(code = 409, message = "Unable to create access token because NiFi is not in the appropriate state. (i.e. may not be configured to support username/password login."),

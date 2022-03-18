@@ -100,7 +100,9 @@
                                     <swaggerDirectory>${project.build.directory}/swagger-ui</swaggerDirectory>
                                     <securityDefinitions>
                                         <securityDefinition>
-                                            <jsonPath>${basedir}/src/main/resources/securityDefinition.json</jsonPath>
+                                            <name>Bearer</name>
+                                            <type>apiKey</type>
+                                            <in>header</in>
                                         </securityDefinition>
                                     </securityDefinitions>
                                 </apiSource>

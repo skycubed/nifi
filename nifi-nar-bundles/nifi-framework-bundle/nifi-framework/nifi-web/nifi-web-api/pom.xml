@@ -98,6 +98,9 @@
                                     <templatePath>classpath:/templates/index.html.hbs</templatePath>
                                     <outputPath>${project.build.directory}/${project.artifactId}-${project.version}/docs/rest-api/index.html</outputPath>
                                     <swaggerDirectory>${project.build.directory}/swagger-ui</swaggerDirectory>
+                                    <securityDefinition>
+                                        <jsonPath>${basedir}/src/main/resources/securityDefinition.json</jsonPath>
+                                    </securityDefinition>
                                 </apiSource>
                             </apiSources>
                         </configuration>
